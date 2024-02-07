@@ -17,8 +17,8 @@ g={128,128,128},
 o={223,113,38},
 b={0,0,0};
 
-std::vector<std::vector<std::vector<int>>>honk=
-{
+std::vector<std::vector<std::vector<std::vector<int>>>>honks=
+{{
 {g,g,g,g,g,w,w,g},
 {w,g,g,g,g,b,w,b},
 {w,w,g,g,g,w,o,o},
@@ -27,19 +27,43 @@ std::vector<std::vector<std::vector<int>>>honk=
 {g,w,w,w,w,w,g,g},
 {g,g,o,g,g,o,g,g},
 {g,g,o,g,g,o,g,g}
-};
+},
+{
+{g,w,w,g,g,g,g,g},
+{b,w,b,g,g,g,g,w},
+{o,o,w,g,g,g,w,w},
+{g,w,w,w,w,w,w,w},
+{g,w,w,w,w,w,w,w},
+{g,g,w,w,w,w,w,g},
+{g,g,o,g,g,o,g,g},
+{g,g,o,g,g,o,g,g}
+},
+{
+{g,g,g,w,w,g,g,g},
+{g,g,w,w,w,w,g,g},
+{g,g,b,w,w,b,g,g},
+{g,g,o,o,o,o,g,g},
+{g,g,w,w,w,w,g,g},
+{g,g,w,w,w,w,g,g},
+{g,g,o,g,g,o,g,g},
+{g,g,o,g,g,o,g,g}
+
+}};
 
 std::vector<std::string>war_declaration=
 {
 "Peace was never an option.",
 "HONK!!",
 "I am in your walls.",
-"bred \n ____\n(~_~_)"
+"i like bread \n ____\n(~_~_)",
+"I am the destructor of worlds."
 };
 
 
 int main()
 {
+std::vector<std::vector<std::vector<int>>> honk=honks[randint(0,honks.size()-1)];
+
 for (uint16_t i=0;i<honk.size();++i)
 {
  for (uint16_t n=0;n<honk[i].size();++n)
